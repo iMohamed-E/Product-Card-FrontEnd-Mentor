@@ -1,0 +1,138 @@
+/* ==================== Global Setup ====================*/
+* {
+  font-family: "Montserrat", "Fraunces", sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --Cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  --Dark-Blue: hsl(212, 21%, 14%);
+  --Gray-Blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  --Font-1: "Montserrat";
+  --Font-2: "Fraunces"
+}
+
+/* ==================== Mobile Display ====================*/
+body {
+  background-color: var(--Cream);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container {
+  background-color: var(--White);
+  border-radius: 12px;
+  max-width: 21.5em;
+  max-height: 50rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.Container .Content {
+  padding: 25px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Container .M-IMG {
+  max-width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+@media screen and (max-width:749px) {
+  .Container .DT-IMG {
+    display: none;
+  }
+}
+
+.Container .Category {
+  font-family: var(--Font-1);
+  color: var(--Gray-Blue);
+  letter-spacing: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.Container .Title {
+  font-family: var(--Font-2);
+}
+
+.Container p {
+  font-family: var(--Font-1);
+  color: var(--Gray-Blue);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 15px 0 0 0;
+}
+
+.Container .Content .Price {
+  display: flex;
+  margin: 20px 0 20px;
+}
+
+.Container .Price .New-Price {
+  font-family: var(--Font-2);
+  color: var(--Cyan);
+}
+
+.Container .Price .Old-Price {
+  text-decoration: line-through;
+  color: var(--Gray-Blue);
+  font-size: 0.9rem;
+  margin-left: 20px;
+}
+
+.Container .Content .BTN {
+  background-color: var(--Cyan);
+  color: var(--White);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+}
+
+.Container .Content .BTN:hover {
+  background-color: hsl(158, 36%, 20%);
+  cursor: pointer;
+}
+
+.Container .Content .BTN img {
+  margin-right: 10px;
+}
+
+/* ==================== Desktop Display ====================*/
+@media  screen and (min-width:750px) {
+  .Container {
+    flex-direction: row;
+    max-width: 36em;
+  }
+
+  .Container .M-IMG {
+    display: none;
+  }
+
+  .Container .DT-IMG {
+    max-width: 50%;
+    border-radius: 12px 0 0 12px;
+  }
+
+  .Container .Content {
+    padding: 0 29px;
+  }
+}
